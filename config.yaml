@@ -10,7 +10,7 @@ output:
   translated_image_dir: "/mnt/d/Download/image_translate1"  # 翻译后图片目录
 
 api:
-  deepseek_key: "Your DeepSeek API"  # DeepSeek API密钥
+  deepseek_key: "your_deepseek_api_key"  # DeepSeek API密钥
   deepseek_url: "https://api.deepseek.com/v1/chat/completions"  # API端点
   max_retries: 3  # API最大重试次数
   retry_delay: 5    # 重试延迟(秒)
