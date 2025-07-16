@@ -1,0 +1,28 @@
+# PDF Translator Configuration
+input:
+  pdf_path: "/mnt/d/Download/PDF_input/39d_22052.pdf"  # 输入PDF路径
+  is_scanned: false  # 是否为扫描件
+
+output:
+  pdf_dir: "/mnt/d/Download/PDF_output"  # PDF输出目录
+  image_dir: "/mnt/d/Download/PDF_to_image"  # 临时图片目录
+  json_dir: "/mnt/d/Download/output_image1"  # OCR结果目录
+  translated_image_dir: "/mnt/d/Download/image_translate1"  # 翻译后图片目录
+
+api:
+  deepseek_key: "sk-c496d3565b00473ba62eab47032d1055"  # DeepSeek API密钥
+  deepseek_url: "https://api.deepseek.com/v1/chat/completions"  # API端点
+  max_retries: 3  # API最大重试次数
+  retry_delay: 5    # 重试延迟(秒)
+  timeout: 30  # API超时时间(秒)
+
+#扫描件PDF处理配置
+processing:
+  dpi: 300  # PDF转图片的DPI
+  thread_count: 4  # 处理线程数
+  keep_temp_files: false  # 是否保留临时文件
+# 新增非扫描件PDF处理配置
+non_scanned:
+  model_path: "/path/to/onnx/model"  # ONNX模型路径
+  font_dir: "/usr/share/fonts/custom"      # 字体目录
+  thread_count: 4                    # 处理线程数
